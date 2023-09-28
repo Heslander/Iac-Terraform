@@ -1,0 +1,37 @@
+### Terraforma ###
+# Diretórios locais .terraform
+**/.terraform/*
+
+# arquivos .tfstate
+*.tfstate
+*.tfstate.*
+
+# Arquivos de log de falhas
+acidente.log
+acidente.*.log
+
+# Exclua todos os arquivos .tfvars, que provavelmente contêm dados confidenciais, como
+# senha, chaves privadas e outros segredos. Eles não devem fazer parte da versão
+# controle, pois são pontos de dados potencialmente sensíveis e sujeitos
+# para mudar dependendo do ambiente.
+*.tfvars
+*.tfvars.json
+
+# Ignore os arquivos de substituição, pois eles geralmente são usados ​​para substituir recursos localmente e assim
+# não estão com check-in
+substituir.tf
+substituir.tf.json
+*_override.tf
+*_override.tf.json
+
+# Inclui arquivos de substituição que você deseja adicionar ao controle de versão usando padrão negado
+# !example_override.tf
+
+# Inclui arquivos tfplan para ignorar a saída do comando plan: terraform plan -out=tfplan
+# exemplo: *tfplan*
+
+# Ignora os arquivos de configuração CLI
+.terraformrc
+terraform.rc
+
+*.pem
